@@ -975,6 +975,13 @@ h3 { color: #ffd166; }
   border-radius: 12px; padding: 11px 14px; line-height: 1.4;
 }
 .ev-promo-result::before { content: "FINAL RESULT  "; font-weight: 900; opacity: .72; }
+
+/* Prayer for the fighters */
+.prayer-card { max-width: 660px; margin: 18px auto; padding: 22px 26px;
+  border: 1px solid rgba(255, 214, 120, .30); border-left: 4px solid #ffd678;
+  border-radius: 14px; background: rgba(255, 255, 255, .045); }
+.prayer-body { font-size: 1.06rem; line-height: 1.8; color: #f3f4f6; margin: 0; }
+.prayer-amen { margin: 16px 0 0; font-weight: 700; color: #ffd678; letter-spacing: .03em; }
 </style>
 </head>
 <body>
@@ -994,6 +1001,7 @@ h3 { color: #ffd166; }
   <button class="tab" data-tab="analytics">📊 Analytics</button>
   <button class="tab" data-tab="gyms">🥊 Gyms</button>
   <button class="tab" data-tab="reels">🎬 Reels &amp; Comps</button>
+  <button class="tab" data-tab="prayer" data-i18n="tab_prayer">🙏 Prayer</button>
 </nav>
 <main id="main">
   <div id="loading" class="loading">Loading Aussie MMA Hub… 🤼</div>
@@ -1179,6 +1187,16 @@ h3 { color: #ffd166; }
     <div id="tix-list" class="tix-list"></div>
   </section>
 
+  <section id="tab-prayer" class="tab-panel">
+    <h2 data-i18n="pray_title">A Prayer for the Fighters</h2>
+    <p class="sub-note" data-i18n="pray_sub">Before every card, we pray.</p>
+    <div class="prayer-card">
+      <p class="prayer-body" data-i18n="pray_body" data-i18n-html>Lord,<br><br>Watch over every fighter who steps through the ropes this weekend. Give them strength for the rounds ahead, clear their minds and steady their hands, and keep them from harm.<br><br>Protect the referees, the doctors and the corner teams who hold their safety in their hands.<br><br>Heal the fighters who have been hurt in this sport, and comfort the families who watch and worry every time their fighter walks out.<br><br>Let the fights be good and honest, let every fighter show what they have trained for, and let every one of them walk out of the ring on their own feet.</p>
+      <p class="prayer-amen" data-i18n="pray_amen">In Jesus' name we pray. Amen.</p>
+    </div>
+    <p class="sub-note" data-i18n="pray_note">Pray for the fighters on the next card, and for their families.</p>
+  </section>
+
 </main>
 <footer class="site-footer"><p>Aussie MMA Hub — data updated <span id="data-updated"></span>. Info from public sources; always confirm events/times with the promoter before attending or buying. 🤼</p><p class="footer-contact">📧 <a href="mailto:aussieboxinghub@outlook.com">aussieboxinghub@outlook.com</a></p></footer>
 <div id="fighter-profile" class="profile-overlay"><div class="profile-panel"><button class="profile-close" data-close-profile aria-label="Close">✕</button><div id="profile-content"></div></div></div>
@@ -1204,6 +1222,13 @@ window.AUSBOX_DATA = {"updated": "2026-10-08", "fighters": [{"name": "\"The Duke
 
   var DICT = {
     en: {
+      tab_prayer: "🙏 Prayer",
+      pray_title: "A Prayer for the Fighters",
+      pray_sub: "Before every card, we pray.",
+      pray_body: "Lord,<br><br>Watch over every fighter who steps through the ropes this weekend. Give them strength for the rounds ahead, clear their minds and steady their hands, and keep them from harm.<br><br>Protect the referees, the doctors and the corner teams who hold their safety in their hands.<br><br>Heal the fighters who have been hurt in this sport, and comfort the families who watch and worry every time their fighter walks out.<br><br>Let the fights be good and honest, let every fighter show what they have trained for, and let every one of them walk out of the ring on their own feet.",
+      pray_amen: "In Jesus' name we pray. Amen.",
+      pray_note: "Pray for the fighters on the next card, and for their families.",
+
       tagline: "Australian boxing · TV · fight cards · fighters · rankings",
       tab_events: "📅 Events",
       tab_boxers: "🏆 Boxers",
@@ -1459,6 +1484,19 @@ window.AUSBOX_DATA = {"updated": "2026-10-08", "fighters": [{"name": "\"The Duke
     },
 
     es: {
+
+      tab_prayer: "🙏 Oración",
+
+      pray_title: "Una oración por los peleadores",
+
+      pray_sub: "Antes de cada velada, oramos.",
+
+      pray_body: "Señor,<br><br>Cuida a cada peleador que suba al ring este fin de semana. Dale fuerza para los asaltos que vienen, despeja su mente, firme su mano y protégelo de todo daño.<br><br>Protege a los árbitros, a los médicos y a los equipos de esquina que tienen su seguridad en las manos.<br><br>Sana a los peleadores que han salido heridos de este deporte, y consuela a las familias que miran y se preocupan cada vez que su peleador sube al ring.<br><br>Que las peleas sean buenas y limpias, que cada peleador muestre lo que ha entrenado, y que todos salgan del ring por su propio pie.",
+
+      pray_amen: "En el nombre de Jesús oramos. Amén.",
+
+      pray_note: "Ora por los peleadores de la próxima velada y por sus familias.",
+
       tagline: "Boxeo australiano · TV · carteleras · peleadores · rankings",
       tab_events: "📅 Eventos",
       tab_boxers: "🏆 Boxeadores",
@@ -1714,6 +1752,19 @@ window.AUSBOX_DATA = {"updated": "2026-10-08", "fighters": [{"name": "\"The Duke
     },
 
     fr: {
+
+      tab_prayer: "🙏 Prière",
+
+      pray_title: "Une prière pour les combattants",
+
+      pray_sub: "Avant chaque gala, nous prions.",
+
+      pray_body: "Seigneur,<br><br>Veille sur chaque combattant qui montera sur le ring ce week-end. Donne-lui la force pour les rounds à venir, la clarté d'esprit, la main sûre, et préserve-le de tout mal.<br><br>Protège les arbitres, les médecins et les équipes de coin qui ont sa sécurité entre les mains.<br><br>Guéris les combattants blessés dans ce sport, et réconforte les familles qui regardent et s'inquiètent chaque fois que leur combattant monte sur le ring.<br><br>Que les combats soient bons et honnêtes, que chacun montre ce qu'il a préparé, et que tous sortent du ring sur leurs propres jambes.",
+
+      pray_amen: "Au nom de Jésus, nous prions. Amen.",
+
+      pray_note: "Priez pour les combattants du prochain gala et pour leurs familles.",
+
       tagline: "Boxe australien · TV · affiches · combattants · classements",
       tab_events: "📅 Événements",
       tab_boxers: "🏆 Boxeurs",
@@ -1969,6 +2020,19 @@ window.AUSBOX_DATA = {"updated": "2026-10-08", "fighters": [{"name": "\"The Duke
     },
 
     tl: {
+
+      tab_prayer: "🙏 Panalangin",
+
+      pray_title: "Isang panalangin para sa mga manlalaban",
+
+      pray_sub: "Bago ang bawat laban, nananalangin kami.",
+
+      pray_body: "Panginoon,<br><br>Bantayan mo ang bawat manlalaban na sasampa sa ring ngayong linggo. Bigyan mo sila ng lakas para sa mga round na darating, linaw ng isip at tibay ng kamay, at ilayo mo sila sa kapahamakan.<br><br>Protektahan mo ang mga referee, doktor at corner team na may hawak ng kanilang kaligtasan.<br><br>Pagalingin mo ang mga manlalabang nasugatan sa sport na ito, at aliwin mo ang mga pamilyang nagmamasid at nag-aalala tuwing sumasampa ang kanilang manlalaban.<br><br>Maging maayos at tapat ang mga laban, ipakita ng bawat isa ang kanilang pinaghirapan, at makalabas ang lahat ng ring sa sarili nilang mga paa.",
+
+      pray_amen: "Sa pangalan ni Hesus, nananalangin kami. Amen.",
+
+      pray_note: "Ipanalangin ang mga manlalaban sa susunod na card at ang kanilang mga pamilya.",
+
       tagline: "Australian boxing · TV · laban · manlalaban · rankings",
       tab_events: "📅 Mga Event",
       tab_boxers: "🏆 Mga Boksingero",
